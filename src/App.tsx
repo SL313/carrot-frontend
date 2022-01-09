@@ -1,41 +1,28 @@
-import { useState } from "react";
-// import Counter from "./Counter";
-// import Adder from "./Adder";
-// import WelcomeName from "./WelcomeName";
-// import ConditionalText from "./ConditionalText";
-// import HiddenName from "./HiddenName";
-import Button from "./Button";
-import Test from "./pages/Test";
+import BottomAppBar from "./components/BottomAppBar";
+import Home from "./pages/Home/index";
+import AppBar from "@mui/material/AppBar";
+import Toolbar from "@mui/material/Toolbar";
+import TradeDetail from "./pages/TradeDetail/index";
 
-const App = () => {
-  // const preventKeyDown = (event: KeyboardEvent<HTMLInputElement>) => {
-  //   console.log(event.key);
-  //   if (event.key === "h") {
-  //     event.preventDefault();
-  //     event.stopPropagation();
-  //   }
-  // };
-  const [latestName, setLatestName] = useState("");
-  const updateLatestName = (name: string) => {
-    setLatestName(name);
-  };
-
+const App = (): JSX.Element => {
   return (
-    <>
-      {/* <input type="text" onKeyDown={preventKeyDown} />
-      <Counter defaultCount={10} />
-      <Adder />
-      <WelcomeName />
-      <ConditionalText />
-      <HiddenName /> */}
-      <Button name="hello" callback={updateLatestName} />
-      <Button name="world" callback={updateLatestName} />
-      <Button name="nextop" callback={updateLatestName} />
-      <article>{latestName} is clicked!</article>
+    <main>
+      {/* <AppBar position="fixed">
+        <Toolbar></Toolbar>
+      </AppBar>
 
-      <Test />
-    </>
+      <Toolbar />
+      <TradeDetail />
+      <Toolbar /> */}
+      <Home />
+
+      {/* <BottomAppBar /> */}
+    </main>
   );
 };
 
 export default App;
+
+// git add *
+// git commit -a -m "적을 메시지"
+// git push origin master
